@@ -1,0 +1,15 @@
+
+1) Собираем образ
+docker build -t larinaaa1/my-private-repo:latest .
+
+2) Проверяем, что образ создан
+docker images
+
+3) Авторизуемся в докер хаб
+docker login
+
+4) Пушим образ
+docker push larinaaa1/my-private-repo:latest
+
+5) Для запуска контейнера с указанием конкретного автора
+docker run -d -p 8000:8000 -e AUTHOR="Ларина Мария 1" larinaaa1/my-private-repo
